@@ -1,0 +1,26 @@
+<html>
+<body bgcolor="pink">
+	connectivity status :
+	<div id = "status">
+		xxx
+	</div>
+</body>
+
+
+<script>
+window.onload = function() {
+	document.getElementById("status").innerText = "online";
+}
+
+window.addEventListener("offline", function(e) {
+	document.getElementById("status").innerText = "offline";
+	document.body.bgColor = "red";
+}, false);
+
+window.addEventListener("online", function(e) {
+	document.getElementById("status").innerText = "online";
+	document.body.bgColor = "green";
+}, false);
+</script>
+
+</html>
